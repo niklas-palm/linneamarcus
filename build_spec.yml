@@ -1,10 +1,16 @@
 
 version: 0.1
 phases:
+  install:
+    commands:
+      - echo Install Node
+      - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+      - sudo apt update
+      - sudo apt install nodejs
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
+      - npm ci
   build:
     commands:
       - echo Build started on `date`
