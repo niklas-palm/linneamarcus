@@ -16,28 +16,14 @@ phases:
       - npm run build
   post_build:
     commands:
-        - echo Build complete...
-#       # copy the contents of /build to S3
-#       - aws s3 cp --recursive --acl public-read ./build s3://${DeployBucket}/ 
-#       # set the cache-control headers for service-worker.js to prevent
-#       # browser caching
-#       - >
-#         aws s3 cp --acl public-read 
-#         --cache-control="max-age=0, no-cache, no-store, must-revalidate" 
-#         ./build/service-worker.js s3://${DeployBucket}/
-#       # set the cache-control headers for index.html to prevent
-#       # browser caching
-#       - >
-#         aws s3 cp --acl public-read 
-#         --cache-control="max-age=0, no-cache, no-store, must-revalidate" 
-#         ./build/index.html s3://${DeployBucket}/
-#       # invalidate the CloudFront cache for index.html and service-worker.js
-#       # to force CloudFront to update its edge locations with the new versions
-#       - >
-#         aws cloudfront create-invalidation --distribution-id ${Distribution} 
-#         --paths /index.html /service-worker.js
+        - echo Build complete. Deleting current contents of the S3 bucket.
+        # This is done because the static assets produced by npm run build
+        # change names. The ones that keep their names overwrite the current
+        # files in the deploy (good) but apart from those the files with
+        # old names are just left, bloating the bucket.
+        - aws s3 rm s3://test-wedding123 --recursive
+
 artifacts:
   files:
-    - 'build/*'
-#   base-directory: build
-# view rawbuild_spec.yml hosted with ❤ by GitHub
+    - '**/*'
+  base-directory: build
