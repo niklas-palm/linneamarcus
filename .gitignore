@@ -11,6 +11,9 @@
 # production
 /build
 
+# Lambdas
+/lambda
+
 # misc
 .DS_Store
 .env.local
