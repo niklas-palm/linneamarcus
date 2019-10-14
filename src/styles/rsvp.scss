@@ -1,0 +1,11 @@
+.RsvpContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .Input {
+    width: 80%;
+    max-width: 400px;
+  }
+}

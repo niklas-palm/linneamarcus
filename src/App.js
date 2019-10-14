@@ -1,31 +1,38 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
-import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import api from "./controler";
+import Landing from "./components/landing";
+import RSVP from "./components/rsvp";
 
 function App() {
-  const [controler] = useState(new api());
+  const [responding, setResponding] = useState(false);
 
   return (
-    <CssBaseline>
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Vi gifter oss och ni är inte bjudna!</p>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => controler.post()}
-          >
-            Press me!
-          </Button>
-        </div>
+    <div className="App">
+      <div className="Header">
+        <h1>Vi gifter oss!</h1>
       </div>
-    </CssBaseline>
+      <Router>
+        <Switch>
+          {responding ? (
+            <Route
+              path="/"
+              component={() => (
+                <RSVP setResponding={bool => setResponding(bool)} />
+              )}
+            />
+          ) : null}
+          <Route
+            path="/"
+            component={() => (
+              <Landing setResponding={bool => setResponding(bool)} />
+            )}
+          />
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
