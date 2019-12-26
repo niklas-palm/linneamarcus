@@ -1,0 +1,69 @@
+@import "./variables.scss";
+
+.LandingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: $headerHeight;
+  margin-bottom: 1em;
+
+  // .Landing {
+  //   width: 100%;
+  //   height: 0;
+  //   padding-top: 66.5%;
+  //   background: url("../assets/linneamarcus.png") no-repeat center;
+  //   background-size: contain;
+  // }
+
+  .LandingImage {
+    width: 100%;
+  }
+
+  .SubHeading {
+    margin-top: 0;
+    font-weight: 200;
+    text-align: center;
+    font-variant: small-caps;
+  }
+
+  .Vigsel {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+    h1 {
+      margin: 1em;
+      font-weight: 200;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+  }
+
+  .Middag {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+    h1 {
+      margin: 1em;
+      font-weight: 200;
+      font-style: italic;
+      margin-bottom: 0;
+    }
+  }
+
+  .divider {
+    width: 60px;
+    border-bottom: 1px solid black;
+    margin: 1em 1em;
+  }
+
+  .rsvp {
+    margin-top: 1em;
+    width: 15em;
+    align-self: center;
+    background-color: rgb(230, 225, 225);
+    color: rgb(167, 138, 86);
+  }
+}

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 
+import Header from "./components/header";
 import Landing from "./components/landing";
 import RSVP from "./components/rsvp";
 
@@ -11,9 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Header">
-        <h1>Vi gifter oss!</h1>
-      </div>
+      <Header />
       <Router>
         <Switch>
           {responding ? (

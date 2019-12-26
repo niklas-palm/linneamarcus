@@ -1,22 +1,25 @@
+@import "styles/variables.scss";
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #202531;
-  // min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+
+  * {
+    max-width: $maxWidth;
+  }
 }
 
-.App-link {
-  color: #09d3ac;
-}
+// .App-header {
+//   background-color: #202531;
+//   // min-height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   font-size: calc(10px + 2vmin);
+//   color: white;
+// }
