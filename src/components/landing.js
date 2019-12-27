@@ -1,10 +1,7 @@
 import React from "react";
 // import logo from "../logo.svg";
-import Button from "@material-ui/core/Button";
 
 import "../styles/landing.scss";
-
-import linneamarcus from "../assets/linneamarcus_mobile.png";
 
 import Overlay from "./overlay";
 
@@ -13,17 +10,10 @@ const Landing = ({ setResponding }) => {
     <div className="LandingContainer">
       {/* <h2 className="SubHeading">Varmt välkomna att fira med oss!</h2> */}
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <img className="LandingImage" src={linneamarcus} alt="Couple" />
+      <img className="LandingImage" alt="Couple" />
       {/* <div className="Landing"></div> */}
-      <Overlay />
-      <Button
-        className="rsvp"
-        variant="contained"
-        color="primary"
-        onClick={() => setResponding(true)}
-      >
-        OSA
-      </Button>
+      <Overlay setResponding={bool => setResponding(bool)} />
+
       <div className="Vigsel">
         <h1>Vigsel</h1>
         <p>Den 1 augusti 2020 smäller det! </p>

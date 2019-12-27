@@ -5,12 +5,24 @@ import "../styles/landing.scss";
 
 import krams from "../assets/krams.png";
 
-const Overlay = () => {
+import Button from "@material-ui/core/Button";
+
+const Overlay = ({ setResponding }) => {
   return (
     <div className="OverlayContainer">
-      <h2>1 Augusti</h2>
-      <img className="OverlayImg" alt="krams" src={krams} />
-      <h2>Vellinge</h2>
+      <div className="OverlayText">
+        <h2>1 Augusti</h2>
+        <img className="OverlayImg" alt="krams" src={krams} />
+        <h2>Vellinge</h2>
+      </div>
+      <Button
+        className="rsvp"
+        variant="contained"
+        color="primary"
+        onClick={() => setResponding(true)}
+      >
+        OSA
+      </Button>
     </div>
   );
 };

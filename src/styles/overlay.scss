@@ -1,19 +1,45 @@
+@import "./variables.scss";
+
 .OverlayContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  //   position: absolute;
-  //   top: 0;
-  margin-top: -10em;
-  z-index: 98;
+  flex-direction: column;
+  position: absolute;
+  top: 18em;
+  width: 100%;
 
-  .OverlayImg {
-    width: 60px;
-    margin: 0 1em;
+  @media (min-width: $tablet-width) {
+    top: 22em;
   }
 
-  h2 {
-    font-weight: 200;
-    color: rgb(240, 227, 205);
+  @media (min-width: $tablet-xl) {
+    top: 25em;
+  }
+
+  .OverlayText {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    //   margin-top: -10em;
+    z-index: 98;
+
+    .OverlayImg {
+      width: 60px;
+      height: 70px;
+      margin: 0 1em;
+    }
+
+    h2 {
+      font-weight: 200;
+      color: rgb(240, 227, 205);
+
+      @media (min-width: $tablet-width) {
+        font-size: 2em;
+      }
+
+      @media (min-width: $tablet-xl) {
+        font-size: 2em;
+      }
+    }
   }
 }
