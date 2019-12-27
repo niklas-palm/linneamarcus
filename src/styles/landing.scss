@@ -26,7 +26,7 @@
     font-variant: small-caps;
   }
 
-  .Vigsel {
+  .left {
     display: flex;
     flex-direction: column;
     margin: 1em;
@@ -36,10 +36,19 @@
       font-weight: 200;
       font-style: italic;
       margin-bottom: 0;
+      text-align: left;
+    }
+
+    p {
+      margin-right: 5em;
+
+      &.intro {
+        margin-bottom: 0;
+      }
     }
   }
 
-  .Middag {
+  .right {
     display: flex;
     flex-direction: column;
     margin: 1em;
@@ -49,12 +58,23 @@
       font-weight: 200;
       font-style: italic;
       margin-bottom: 0;
+      text-align: right;
+    }
+
+    p {
+      margin-left: 5em;
+
+      &.intro {
+        margin-bottom: 0;
+      }
     }
   }
 
   .divider {
+    align-self: center;
     width: 60px;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid #af915d;
+    border-bottom: 1px solid #c9a972;
     margin: 1em 1em;
   }
 

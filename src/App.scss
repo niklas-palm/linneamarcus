@@ -7,19 +7,10 @@
   align-items: center;
   align-self: center;
   width: 100%;
+  font-family: "Lato", sans-serif;
+  // font-family: "Roboto", sans-serif;
 
   * {
     max-width: $maxWidth;
   }
 }
-
-// .App-header {
-//   background-color: #202531;
-//   // min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }

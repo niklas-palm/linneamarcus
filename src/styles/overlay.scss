@@ -7,6 +7,10 @@
   top: 18em;
   width: 100%;
 
+  @media (max-width: $phone-xl-width) {
+    top: 15em;
+  }
+
   @media (min-width: $tablet-width) {
     top: 22em;
   }
@@ -32,6 +36,10 @@
     h2 {
       font-weight: 200;
       color: rgb(240, 227, 205);
+
+      @media (max-width: $phone-xl-width) {
+        font-size: 1.3em;
+      }
 
       @media (min-width: $tablet-width) {
         font-size: 2em;
