@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+
+import { NAVIGATE_TO } from "../actions";
+import { routes } from "../reducers/reducer_router";
 
 // import api from "../controler";
 
 import "../styles/rsvp.scss";
 
 const RSVP = ({ setResponding }) => {
+  const dispatch = useDispatch();
   // const [controler] = useState(new api());
 
   return (
     <div className="RsvpContainer">
       <TextField
-        id="outlined-email-input"
+        id="namn"
         label="Namn"
         className="Input"
         type="name"
@@ -21,7 +27,7 @@ const RSVP = ({ setResponding }) => {
         variant="outlined"
       />
       <TextField
-        id="outlined-email-input"
+        id="tel"
         label="Telefonnummer"
         // className={classes.textField}
         className="Input"
@@ -32,7 +38,7 @@ const RSVP = ({ setResponding }) => {
         variant="outlined"
       />
       <TextField
-        id="outlined-email-input"
+        id="allergies"
         label="Allergier"
         // className={classes.textField}
         className="Input"
@@ -46,7 +52,7 @@ const RSVP = ({ setResponding }) => {
       <Button
         variant="contained"
         color="primary"
-        onClick={() => setResponding(false)}
+        onClick={() => dispatch({ type: NAVIGATE_TO, payload: routes.LANDING })}
       >
         Press me!
       </Button>

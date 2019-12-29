@@ -16,7 +16,7 @@ const Schedule = () => {
       <div className="InfoContainer">
         <div className="Row">
           <div className="IconContainer">
-            <img className="Icon" src={bus} />
+            <img className="Icon" src={bus} alt="bus" />
           </div>
           <p className="Time">13:00</p>
           <p className="Info">Avgång från hotellet</p>
@@ -24,7 +24,7 @@ const Schedule = () => {
 
         <div className="Row">
           <div className="IconContainer">
-            <img className="Icon" src={rings} />
+            <img className="Icon" src={rings} alt="rings" />
           </div>
           <p className="Time">14:00</p>
           <p className="Info">Vigsel</p>
@@ -32,7 +32,7 @@ const Schedule = () => {
 
         <div className="Row">
           <div className="IconContainer">
-            <img className="Icon" src={mingel} />
+            <img className="Icon" src={mingel} alt="glasses" />
           </div>
           <p className="Time">15:30</p>
           <p className="Info">Mingel på Stallgården</p>
@@ -40,7 +40,7 @@ const Schedule = () => {
 
         <div className="Row">
           <div className="IconContainer">
-            <img className="Icon" src={camera} />
+            <img className="Icon" src={camera} alt="camera" />
           </div>
           <p className="Time">16:00</p>
           <p className="Info">Gruppfoto</p>
@@ -48,7 +48,7 @@ const Schedule = () => {
 
         <div className="Row">
           <div className="IconContainer">
-            <img className="Icon" src={party} />
+            <img className="Icon" src={party} alt="party" />
           </div>
           <p className="Time">17:00 - 03:00</p>
           <p className="Info">Middag och fest</p>

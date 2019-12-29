@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "../logo.svg";
 
 import "../styles/landing.scss";
 
@@ -13,7 +12,7 @@ const Landing = ({ setResponding }) => {
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
       <img className="LandingImage" alt="Couple" />
       {/* <div className="Landing"></div> */}
-      <Overlay setResponding={bool => setResponding(bool)} />
+      <Overlay />
 
       <div className="left">
         <h1>Vigsel</h1>
@@ -42,7 +41,7 @@ const Landing = ({ setResponding }) => {
 
       <Schedule />
 
-      <div className="left">
+      {/* <div className="left">
         <h1>Uppvärmning</h1>
         <p className="intro">
           Eftersom många gäster kommer långväga, vi gillar er så mycket och
@@ -58,7 +57,7 @@ const Landing = ({ setResponding }) => {
           redan då! Glöm inte att meddela eventuellt deltagande när du OSA:r så
           vi vet hur mycket mat vi ska ordna :)
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

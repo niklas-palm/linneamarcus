@@ -1,0 +1,26 @@
+.Drawer {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5em;
+  font-family: "Lato", sans-serif;
+
+  .DrawerRow {
+    display: flex;
+    flex: row;
+    width: 100%;
+    margin-left: 1.5em;
+    align-items: center;
+
+    .Icon {
+      height: auto;
+      width: 25px;
+      color: grey;
+    }
+
+    h3 {
+      margin-left: 2em;
+      font-weight: 200;
+    }
+  }
+}
