@@ -41,9 +41,18 @@
 
     p {
       margin-right: 5em;
+      text-align: justify;
 
       &.intro {
         margin-bottom: 0;
+      }
+
+      @media (min-width: $tablet-width) {
+        margin-right: 25em;
+      }
+
+      @media (min-width: $tablet-xl) {
+        margin-right: 25em;
       }
     }
   }
@@ -63,9 +72,18 @@
 
     p {
       margin-left: 5em;
+      text-align: justify;
 
       &.intro {
         margin-bottom: 0;
+      }
+
+      @media (min-width: $tablet-width) {
+        margin-left: 25em;
+      }
+
+      @media (min-width: $tablet-xl) {
+        margin-left: 25em;
       }
     }
   }
