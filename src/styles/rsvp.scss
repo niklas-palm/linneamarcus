@@ -12,4 +12,44 @@
     width: 80%;
     max-width: 400px;
   }
+
+  h3 {
+    font-weight: 200;
+    text-align: center;
+  }
+
+  .Choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    max-width: 400px;
+
+    h3 {
+      flex: 6;
+      font-weight: 200;
+    }
+
+    .Radio {
+      flex: 1;
+      margin: 0 1em;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .RsvpButton {
+    margin-top: 1em;
+    width: 6em;
+    align-self: center;
+    background-color: transparent;
+    color: cadetblue;
+    border: 1px solid rgb(160, 160, 160);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }

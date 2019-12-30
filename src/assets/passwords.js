@@ -1,0 +1,9 @@
+export const PASSWORDS = [
+  "$2a$10$WtgUgw8UASGN5nXg31O8BOEelZA0YIb0AiWL7ah3SdQq.LH3to9p.",
+  "$2a$10$WtgUgw8UASGN5nXg31O8BOwQfy51884XCdIcrVJGU2I8MZHJHr4Bu",
+  "$2a$10$WtgUgw8UASGN5nXg31O8BO5iTlFBtlhJPnavygdAQ6XV8rU/8/zM2",
+  "$2a$10$WtgUgw8UASGN5nXg31O8BOiwd6HRMcSh5lmqnmCTVOTrsMoVOiHji",
+  "$2a$10$WtgUgw8UASGN5nXg31O8BOwu55EMxMwaJdQhMsi2cyCeKRBLpsBQq"
+];
+
+export const SALT = "$2a$10$WtgUgw8UASGN5nXg31O8BO";
