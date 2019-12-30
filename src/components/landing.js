@@ -24,7 +24,7 @@ const Landing = ({ setResponding }) => {
         </p>
       </div>
 
-      <div className="divider"></div>
+      {/* <div className="divider"></div> */}
 
       <div className="right">
         <h1>Middag och fest</h1>
@@ -38,8 +38,26 @@ const Landing = ({ setResponding }) => {
           er bäst, antingen kl. 01:30 eller kl. 03:15.
         </p>
       </div>
+      <div className="divider"></div>
+
+      <div className="center">
+        <h2>Klädsel - kavaj</h2>
+        <p className="intro">
+          Kostym i valfri färg, klänning, kjol/byxor, byxdress osv.
+        </p>
+      </div>
+      <div className="divider"></div>
 
       <Schedule />
+
+      <div className="center">
+        <h2>Barn</h2>
+        <p className="intro">
+          För att alla föräldrar ska kunna släppa loss riktigt ordentligt önskar
+          vi en barnfri helg (självklart med undantag för de allra minsta
+          småttingarna).{" "}
+        </p>
+      </div>
 
       {/* <div className="left">
         <h1>Uppvärmning</h1>

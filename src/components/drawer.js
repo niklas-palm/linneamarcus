@@ -59,13 +59,13 @@ export default function SwipeableTemporaryDrawer() {
         <div className="DrawerRow" onClick={() => navigateTo(routes.FRIDAY)}>
           <img src={mingle} alt="mingle" className="Icon" />
           {/* <FastfoodOutlinedIcon className="Icon" /> */}
-          <h3 style={current == routes.FRIDAY ? { color } : null}>Fredag</h3>
+          <h3 style={current === routes.FRIDAY ? { color } : null}>Fredag</h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
           {/* <DirectionsRunIcon className="Icon" /> */}
           <img src={heart} alt="heart" className="Icon" />
-          <h3 style={current == routes.LANDING ? { color } : null}>
+          <h3 style={current === routes.LANDING ? { color } : null}>
             Bröllopsdag
           </h3>
         </div>
@@ -74,7 +74,7 @@ export default function SwipeableTemporaryDrawer() {
           {/* <InfoOutlined className="Icon" /> */}
           <img src={info} alt="info" className="Icon" />
 
-          <h3 style={current == routes.INFO ? { color } : null}>
+          <h3 style={current === routes.INFO ? { color } : null}>
             Praktikaliteter
           </h3>
         </div>
@@ -82,7 +82,7 @@ export default function SwipeableTemporaryDrawer() {
         <div className="DrawerRow" onClick={() => navigateTo(routes.RSVP)}>
           {/* <FavoriteBorderOutlinedIcon className="Icon" /> */}
           <img src={rsvp} alt="osa" className="Icon" />
-          <h3 style={current == routes.RSVP ? { color } : null}>OSA</h3>
+          <h3 style={current === routes.RSVP ? { color } : null}>OSA</h3>
         </div>
 
         <Divider />
@@ -91,7 +91,7 @@ export default function SwipeableTemporaryDrawer() {
           {/* <ContactPhoneOutlinedIcon className="Icon" /> */}
           <img src={contact} alt="contact" className="Icon" />
 
-          <h3 style={current == routes.CONTACT ? { color } : null}>Kontakt</h3>
+          <h3 style={current === routes.CONTACT ? { color } : null}>Kontakt</h3>
         </div>
       </div>
     );
