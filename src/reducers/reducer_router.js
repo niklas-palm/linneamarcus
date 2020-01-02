@@ -4,7 +4,8 @@ export const routes = {
   LANDING: "landing",
   RSVP: "rsvp",
   FRIDAY: "friday",
-  CONTACT: "contact"
+  CONTACT: "contact",
+  INFO: "info"
 };
 
 export default function(state = routes.LANDING, action) {

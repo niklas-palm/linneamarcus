@@ -70,7 +70,7 @@ export default function SwipeableTemporaryDrawer() {
           </h3>
         </div>
 
-        <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
+        <div className="DrawerRow" onClick={() => navigateTo(routes.INFO)}>
           {/* <InfoOutlined className="Icon" /> */}
           <img src={info} alt="info" className="Icon" />
 
