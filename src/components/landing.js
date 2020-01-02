@@ -38,9 +38,9 @@ const Landing = () => {
       <div className="divider"></div>
 
       <div className="center">
-        <h2>Klädsel - kavaj</h2>
+        <h2>Klädsel - mörk kostym</h2>
         <p className="intro">
-          Kostym i valfri färg, klänning, kjol/byxor, byxdress osv.
+          Kostym i mörkare färg, klänning, kjol/byxor, byxdress eller liknande
         </p>
       </div>
       <div className="divider"></div>

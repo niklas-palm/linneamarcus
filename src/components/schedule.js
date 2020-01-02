@@ -13,7 +13,7 @@ const Schedule = () => {
     <div className="Schedule">
       <h2 className="Title">Viktiga hålltider</h2>
 
-      <div className="InfoContainer">
+      <div className="ScheduleContainer">
         <div className="Row">
           <div className="IconContainer">
             <img className="Icon" src={bus} alt="bus" />
