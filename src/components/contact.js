@@ -35,8 +35,6 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="divider"></div>
-
         <div className="ContactItem">
           <h2 className="ContactName">Marcus</h2>
           <div className="ContactInfo">
@@ -58,6 +56,29 @@ const Contact = () => {
                   marcus.almhagen@gmail.com
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="ContactItem">
+        <h2 className="ContactName">Toastmadames</h2>
+        <div className="ContactInfo">
+          <div className="ContactRow">
+            <div className="Left">
+              <img src={contact} alt="phone" className="Icon" />
+            </div>
+            <div className="Right">
+              <a href="tel:+46700029421">+46 70-xxx xx xx</a>
+            </div>
+          </div>
+
+          <div className="ContactRow">
+            <div className="Left">
+              <img src={mail} alt="mail" className="Icon" />
+            </div>
+            <div className="Right">
+              <a href="mailto:toast@linneamarcus.se">toast@linneamarcus.se</a>
             </div>
           </div>
         </div>

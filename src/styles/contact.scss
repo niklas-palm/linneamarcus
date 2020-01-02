@@ -26,50 +26,56 @@
       flex-direction: row;
       width: 80%;
     }
+  }
 
-    .ContactName {
-      text-align: center;
-      font-style: italic;
-      font-weight: 200;
+  .ContactName {
+    text-align: center;
+    font-style: italic;
+    font-weight: 200;
+  }
+
+  .ContactItem {
+    width: 90%;
+    margin-bottom: 1em;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      width: 50%;
+      margin-bottom: 2em;
     }
 
-    .ContactItem {
-      width: 90%;
-      margin-bottom: 1em;
+    .ContactInfo {
+      display: flex;
+      flex-direction: column;
 
-      .ContactInfo {
+      .ContactRow {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
 
-        .ContactRow {
+        .Left {
+          flex: 2;
           display: flex;
-          flex-direction: row;
-          align-items: center;
-          width: 100%;
+          justify-content: flex-end;
 
-          .Left {
-            flex: 2;
-            display: flex;
-            justify-content: flex-end;
-
-            .Icon {
-              text-align: center;
-              height: 35px;
-              width: 35px;
-              color: grey;
-            }
+          .Icon {
+            text-align: center;
+            height: 35px;
+            width: 35px;
+            color: grey;
           }
+        }
 
-          .Right {
-            margin-left: 2em;
-            flex: 5;
-            display: flex;
-            justify-content: flex-start;
+        .Right {
+          margin-left: 2em;
+          flex: 5;
+          display: flex;
+          justify-content: flex-start;
 
-            a {
-              text-decoration: underline;
-              color: inherit;
-            }
+          a {
+            text-decoration: underline;
+            color: inherit;
           }
         }
       }
