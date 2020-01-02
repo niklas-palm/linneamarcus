@@ -21,19 +21,22 @@
 
   .OverlayText {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     z-index: 98;
 
     .OverlayImg {
       width: 60px;
       height: 70px;
-      margin: 0 1em;
+      margin: -0.7em 0;
     }
 
     h2 {
       font-weight: 200;
+      font-style: italic;
       color: rgb(240, 227, 205);
+      margin: 0;
 
       @media (max-width: $phone-xl-width) {
         font-size: 1.3em;
