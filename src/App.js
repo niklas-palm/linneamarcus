@@ -15,6 +15,7 @@ import Drawer from "./components/drawer";
 import Landing from "./components/landing";
 import RSVP from "./components/rsvp";
 import Friday from "./components/friday";
+import Contact from "./components/contact";
 
 function App() {
   const route = useSelector(state => state.route);
@@ -31,6 +32,9 @@ function App() {
 
       case routes.FRIDAY:
         return <Friday />;
+
+      case routes.CONTACT:
+        return <Contact />;
 
       default:
         break;

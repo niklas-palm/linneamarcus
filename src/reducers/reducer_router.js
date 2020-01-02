@@ -3,7 +3,8 @@ import { NAVIGATE_TO } from "../actions";
 export const routes = {
   LANDING: "landing",
   RSVP: "rsvp",
-  FRIDAY: "friday"
+  FRIDAY: "friday",
+  CONTACT: "contact"
 };
 
 export default function(state = routes.LANDING, action) {

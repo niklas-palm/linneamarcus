@@ -87,7 +87,7 @@ export default function SwipeableTemporaryDrawer() {
 
         <Divider />
 
-        <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
+        <div className="DrawerRow" onClick={() => navigateTo(routes.CONTACT)}>
           {/* <ContactPhoneOutlinedIcon className="Icon" /> */}
           <img src={contact} alt="contact" className="Icon" />
 
