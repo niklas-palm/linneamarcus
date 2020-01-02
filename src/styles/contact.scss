@@ -1,15 +1,78 @@
 @import "./variables.scss";
 
 .ContactContainer {
-  margin-top: $headerHeight;
+  margin-top: $headerHeight + 3em;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  h2 {
+  h3 {
+    margin-top: 2em;
     font-weight: 200;
-    font-style: italic;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .ContactItems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      width: 80%;
+    }
+
+    .ContactName {
+      text-align: center;
+      font-style: italic;
+      font-weight: 200;
+    }
+
+    .ContactItem {
+      width: 90%;
+      margin-bottom: 1em;
+
+      .ContactInfo {
+        display: flex;
+        flex-direction: column;
+
+        .ContactRow {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+
+          .Left {
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+
+            .Icon {
+              text-align: center;
+              height: 35px;
+              width: 35px;
+              color: grey;
+            }
+          }
+
+          .Right {
+            margin-left: 2em;
+            flex: 5;
+            display: flex;
+            justify-content: flex-start;
+
+            a {
+              text-decoration: underline;
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
   }
 }
