@@ -1,16 +1,13 @@
 import React from "react";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-import { TOGGLE_DRAWER } from "./actions";
 import { routes } from "./reducers/reducer_router";
 
 import "./App.scss";
 
-import MenuIcon from "@material-ui/icons/Menu";
-
 import Header from "./components/header";
 import Drawer from "./components/drawer";
+import Hamburger from "./components/hamburger";
 
 import Landing from "./components/landing";
 import RSVP from "./components/rsvp";
@@ -20,8 +17,6 @@ import Info from "./components/info";
 
 function App() {
   const route = useSelector(state => state.route);
-  const dispatch = useDispatch();
-  // const [responding, setResponding] = useState(false);
 
   const renderRoute = () => {
     switch (route) {
@@ -49,32 +44,9 @@ function App() {
     <div className="App">
       <Header />
       <Drawer />
-      <div
-        className="Hamburger"
-        onClick={() => dispatch({ type: TOGGLE_DRAWER, payload: true })}
-      >
-        <MenuIcon className="Icon" />
-      </div>
-      {renderRoute()}
+      <Hamburger />
 
-      {/* <Router>
-        <Switch>
-          {responding ? (
-            <Route
-              path="/"
-              component={() => (
-                <RSVP setResponding={bool => setResponding(bool)} />
-              )}
-            />
-          ) : null}
-          <Route
-            path="/"
-            component={() => (
-              <Landing setResponding={bool => setResponding(bool)} />
-            )}
-          />
-        </Switch>
-      </Router> */}
+      {renderRoute()}
     </div>
   );
 }

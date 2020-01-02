@@ -1,18 +1,7 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import DirectionsRunIcon from "@material-ui/icons/DirectionsRun";
-import FastfoodOutlinedIcon from "@material-ui/icons/FastfoodOutlined";
-import InfoOutlined from "@material-ui/icons/InfoOutlined";
-import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
-import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -58,12 +47,10 @@ export default function SwipeableTemporaryDrawer() {
       <div className="Drawer">
         <div className="DrawerRow" onClick={() => navigateTo(routes.FRIDAY)}>
           <img src={mingle} alt="mingle" className="Icon" />
-          {/* <FastfoodOutlinedIcon className="Icon" /> */}
           <h3 style={current === routes.FRIDAY ? { color } : null}>Fredag</h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
-          {/* <DirectionsRunIcon className="Icon" /> */}
           <img src={heart} alt="heart" className="Icon" />
           <h3 style={current === routes.LANDING ? { color } : null}>
             Bröllopsdag
@@ -71,7 +58,6 @@ export default function SwipeableTemporaryDrawer() {
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.INFO)}>
-          {/* <InfoOutlined className="Icon" /> */}
           <img src={info} alt="info" className="Icon" />
 
           <h3 style={current === routes.INFO ? { color } : null}>
@@ -80,7 +66,6 @@ export default function SwipeableTemporaryDrawer() {
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.RSVP)}>
-          {/* <FavoriteBorderOutlinedIcon className="Icon" /> */}
           <img src={rsvp} alt="osa" className="Icon" />
           <h3 style={current === routes.RSVP ? { color } : null}>OSA</h3>
         </div>
@@ -88,7 +73,6 @@ export default function SwipeableTemporaryDrawer() {
         <Divider />
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.CONTACT)}>
-          {/* <ContactPhoneOutlinedIcon className="Icon" /> */}
           <img src={contact} alt="contact" className="Icon" />
 
           <h3 style={current === routes.CONTACT ? { color } : null}>Kontakt</h3>
@@ -105,7 +89,6 @@ export default function SwipeableTemporaryDrawer() {
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
       >
-        {/* {sideList("right")} */}
         {list()}
       </SwipeableDrawer>
     </div>
