@@ -35,6 +35,8 @@
 
     @media (min-width: $tablet-width) {
       margin-left: 5em;
+      width: 75%;
+      align-self: center;
     }
 
     h1 {
@@ -63,11 +65,11 @@
       }
 
       @media (min-width: $tablet-width) {
-        margin-right: 25em;
+        margin-right: 15em;
       }
 
       @media (min-width: $tablet-xl) {
-        margin-right: 25em;
+        margin-right: 15em;
       }
     }
   }
@@ -102,6 +104,8 @@
 
     @media (min-width: $tablet-width) {
       margin-right: 5em;
+      width: 75%;
+      align-self: center;
     }
 
     h1 {
@@ -130,11 +134,11 @@
       }
 
       @media (min-width: $tablet-width) {
-        margin-left: 25em;
+        margin-left: 15em;
       }
 
       @media (min-width: $tablet-xl) {
-        margin-left: 25em;
+        margin-left: 15em;
       }
     }
   }
