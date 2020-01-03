@@ -32,12 +32,7 @@ const Info = () => {
         <p className="intro">
           Tänk på att boka resa i god tid för att slippa onödiga kostnader när
           priserna stiger. Scandic S:t Jörgen i Malmö ligger centralt beläget på
-          cirka 10 minuters gångavstånd från Malmös centralstation. Ni tar er
-          enkelt till Malmö via:
-        </p>
-        <p style={{ color: "red" }}>
-          Vill ni lista olika alternativ här? Är det ingenting folk kan lista ut
-          på egen hand?
+          cirka 10 minuters gångavstånd från Malmös centralstation.
         </p>
       </div>
 

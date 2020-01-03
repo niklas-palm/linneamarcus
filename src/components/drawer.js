@@ -10,11 +10,11 @@ import { routes } from "../reducers/reducer_router";
 
 import "../styles/drawer.scss";
 
-import mingle from "../assets/drawer/mingle.png";
-import heart from "../assets/drawer/heart.png";
-import contact from "../assets/drawer/contact.png";
-import info from "../assets/drawer/info.png";
-import rsvp from "../assets/drawer/rsvp.png";
+// import mingle from "../assets/drawer/mingle.png";
+// import heart from "../assets/drawer/heart.png";
+// import contact from "../assets/drawer/contact.png";
+// import info from "../assets/drawer/info.png";
+// import rsvp from "../assets/drawer/rsvp.png";
 
 export default function SwipeableTemporaryDrawer() {
   const dispatch = useDispatch();

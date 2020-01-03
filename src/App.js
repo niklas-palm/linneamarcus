@@ -6,6 +6,7 @@ import { routes } from "./reducers/reducer_router";
 import "./App.scss";
 
 import Header from "./components/header";
+import DesktopHeader from "./components/desktopHeader";
 import Drawer from "./components/drawer";
 import Hamburger from "./components/hamburger";
 
@@ -42,7 +43,9 @@ function App() {
 
   return (
     <div className="App">
+      <DesktopHeader />
       <Header />
+
       <Drawer />
       <Hamburger />
 

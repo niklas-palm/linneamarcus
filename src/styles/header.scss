@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .Header {
   // display: flex;
   // flex-direction: row;
@@ -13,6 +15,10 @@
   position: fixed;
   z-index: 99;
   top: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   h1 {
     font-size: 1.7em;
