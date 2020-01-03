@@ -50,11 +50,16 @@ export default function SwipeableTemporaryDrawer() {
           <h3 style={current === routes.FRIDAY ? { color } : null}>Fredag</h3>
         </div>
 
-        <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
+        <div className="DrawerRow" onClick={() => navigateTo(routes.WEDDING)}>
           {/* <img src={heart} alt="heart" className="Icon" /> */}
-          <h3 style={current === routes.LANDING ? { color } : null}>
+          <h3 style={current === routes.WEDDING ? { color } : null}>
             Bröllopsdag
           </h3>
+        </div>
+
+        <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
+          {/* <img src={heart} alt="heart" className="Icon" /> */}
+          <h3 style={current === routes.LANDING ? { color } : null}>Om oss</h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.INFO)}>

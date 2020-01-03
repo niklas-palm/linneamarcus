@@ -2,16 +2,12 @@ import React from "react";
 
 import "../styles/landing.scss";
 
-import Overlay from "./overlay";
 import Schedule from "./schedule";
 
-const Landing = () => {
+const Wedding = () => {
   return (
     <div className="LandingContainer">
-      <img className="LandingImage" alt="Couple" />
-      <Overlay />
-
-      {/* <div className="left">
+      <div className="left">
         <h1>
           <span className="FirstLetter">V</span> <span>igsel</span>
         </h1>
@@ -21,11 +17,11 @@ const Landing = () => {
           Kom i tid! I händelse av försening ber vi er kontakta xx [tel] eller
           xx [tel].
         </p>
-      </div> */}
+      </div>
 
       {/* <div className="divider"></div> */}
 
-      {/* <div className="right">
+      <div className="right">
         <h1>
           <span className="FirstLetter">M</span> <span>iddag och fest</span>
         </h1>
@@ -39,26 +35,17 @@ const Landing = () => {
           er bäst, antingen kl. 01:30 eller kl. 03:15.
         </p>
       </div>
-      <div className="divider"></div> */}
+      <div className="divider"></div>
 
-      <div className="center" style={{ marginTop: "2em" }}>
-        {/* <h2>Klädsel - mörk kostym</h2> */}
+      <div className="center">
+        <h2>Klädsel - mörk kostym</h2>
         <p className="intro">
-          En mörk novemberkväll 2012 i vimlet på Stockholms nation i Uppsala
-          träffades vi, brudparet, för första gången och båda kände att det låg
-          något speciellt i luften. Marcus försökte bjuda hem Linnea på
-          efterfest, Linnea nappade dock inte den gången. Några veckor senare
-          var det dags för lussegasque, och vi pratade oavbrutet med varandra i
-          minst åtta timmar… osv Den första kyssen ägde rum i på Snerikes nation
-          i Uppsala precis före jul, och efter det har vi varit oskiljaktiga.
+          Kostym i mörkare färg, klänning, kjol/byxor, byxdress eller liknande
         </p>
       </div>
-      <div
-        className="divider"
-        style={{ marginBottom: "2em", marginTop: "0.5em" }}
-      ></div>
+      <div className="divider"></div>
 
-      {/* <Schedule />
+      <Schedule />
 
       <div className="center">
         <h2>Barn</h2>
@@ -67,9 +54,9 @@ const Landing = () => {
           vi en barnfri helg (självklart med undantag för de allra minsta
           småttingarna).{" "}
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };
 
-export default Landing;
+export default Wedding;

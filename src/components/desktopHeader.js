@@ -11,7 +11,6 @@ import { routes } from "../reducers/reducer_router";
 const DesktopHeader = () => {
   const dispatch = useDispatch();
   const route = useSelector(state => state.route);
-  console.log(route);
 
   const color = "#bd9147";
 
@@ -27,9 +26,9 @@ const DesktopHeader = () => {
 
       <div
         className="DeskHeaderItem"
-        onClick={() => navigateTo(routes.LANDING)}
+        onClick={() => navigateTo(routes.WEDDING)}
       >
-        <h3 style={route === routes.LANDING ? { color } : null}>Bröllopsdag</h3>
+        <h3 style={route === routes.WEDDING ? { color } : null}>Bröllopsdag</h3>
       </div>
 
       <div
@@ -39,8 +38,8 @@ const DesktopHeader = () => {
         <h3 style={route === routes.LANDING ? { color } : null}>Om oss</h3>
       </div>
 
-      <div className="HeaderCenter">
-        <h1>Niklas</h1>
+      <div className="HeaderCenter" onClick={() => navigateTo(routes.LANDING)}>
+        <h1>Linnea</h1>
         <img className="HeaderRings" src={rings} alt="rings" />
         <h1>Marcus</h1>
       </div>

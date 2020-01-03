@@ -11,6 +11,7 @@ import Drawer from "./components/drawer";
 import Hamburger from "./components/hamburger";
 
 import Landing from "./components/landing";
+import Wedding from "./components/wedding";
 import RSVP from "./components/rsvp";
 import Friday from "./components/friday";
 import Contact from "./components/contact";
@@ -23,6 +24,9 @@ function App() {
     switch (route) {
       case routes.LANDING:
         return <Landing />;
+
+      case routes.WEDDING:
+        return <Wedding />;
 
       case routes.RSVP:
         return <RSVP />;

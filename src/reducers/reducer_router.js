@@ -5,7 +5,8 @@ export const routes = {
   RSVP: "rsvp",
   FRIDAY: "friday",
   CONTACT: "contact",
-  INFO: "info"
+  INFO: "info",
+  WEDDING: "wedding"
 };
 
 export default function(state = routes.LANDING, action) {
