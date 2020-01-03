@@ -76,6 +76,11 @@
           a {
             text-decoration: underline;
             color: inherit;
+            font-size: 1.1em;
+
+            @media (min-width: $phone-xl-width) {
+              font-size: 1.3em;
+            }
           }
         }
       }

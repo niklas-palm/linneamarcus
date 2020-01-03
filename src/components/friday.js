@@ -4,7 +4,9 @@ const Friday = () => {
   return (
     <div className="LandingContainer">
       <div className="left">
-        <h1>Uppvärmning</h1>
+        <h1>
+          <span className="FirstLetter">U</span> <span>ppvärmning</span>
+        </h1>
         <p className="intro">
           Eftersom många gäster kommer långväga, vi gillar er så mycket och
           träffar många av er alldeles för sällan vill vi gärna hänga med er

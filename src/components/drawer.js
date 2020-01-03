@@ -23,7 +23,7 @@ export default function SwipeableTemporaryDrawer() {
   const open = state.drawer;
   const current = state.route;
 
-  const color = "cadetblue";
+  const color = "#bd9147";
 
   const toggleDrawer = open => event => {
     if (
@@ -46,19 +46,19 @@ export default function SwipeableTemporaryDrawer() {
     return (
       <div className="Drawer">
         <div className="DrawerRow" onClick={() => navigateTo(routes.FRIDAY)}>
-          <img src={mingle} alt="mingle" className="Icon" />
+          {/* <img src={mingle} alt="mingle" className="Icon" /> */}
           <h3 style={current === routes.FRIDAY ? { color } : null}>Fredag</h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
-          <img src={heart} alt="heart" className="Icon" />
+          {/* <img src={heart} alt="heart" className="Icon" /> */}
           <h3 style={current === routes.LANDING ? { color } : null}>
             Bröllopsdag
           </h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.INFO)}>
-          <img src={info} alt="info" className="Icon" />
+          {/* <img src={info} alt="info" className="Icon" /> */}
 
           <h3 style={current === routes.INFO ? { color } : null}>
             Praktikaliteter
@@ -66,14 +66,14 @@ export default function SwipeableTemporaryDrawer() {
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.RSVP)}>
-          <img src={rsvp} alt="osa" className="Icon" />
+          {/* <img src={rsvp} alt="osa" className="Icon" /> */}
           <h3 style={current === routes.RSVP ? { color } : null}>OSA</h3>
         </div>
 
         <Divider />
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.CONTACT)}>
-          <img src={contact} alt="contact" className="Icon" />
+          {/* <img src={contact} alt="contact" className="Icon" /> */}
 
           <h3 style={current === routes.CONTACT ? { color } : null}>Kontakt</h3>
         </div>
