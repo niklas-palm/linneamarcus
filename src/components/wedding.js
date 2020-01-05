@@ -47,12 +47,21 @@ const Wedding = () => {
 
       <Schedule />
 
-      <div className="center">
-        <h2>Barn</h2>
+      {/* <div className="center">
+        <h2>Tal</h2>
         <p className="intro">
-          För att alla föräldrar ska kunna släppa loss riktigt ordentligt önskar
-          vi en barnfri helg (självklart med undantag för de allra minsta
-          småttingarna).{" "}
+          Vill du hålla tal eller göra något annat spex under middagen, kontakta
+          våra eminenta toastmadames Jenny Palmgren och Hanna Arvidsson på xxx
+          senast den 10 juli 2020.
+        </p>
+      </div> */}
+
+      <div className="center">
+        <h2>Tal </h2>
+        <p className="intro">
+          Vill du hålla tal eller göra något annat spex under middagen, kontakta
+          våra eminenta toastmadames Jenny Palmgren och Hanna Arvidsson på xxx
+          senast den 10 juli 2020.
         </p>
       </div>
     </div>

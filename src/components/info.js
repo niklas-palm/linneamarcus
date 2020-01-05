@@ -72,22 +72,22 @@ const Info = () => {
 
       <div className="left">
         <h1>
-          <span className="FirstLetter">T</span> <span>al</span>
-        </h1>
-        <p className="intro">
-          Vill du hålla tal eller göra något annat spex under middagen, kontakta
-          våra eminenta toastmadames Jenny Palmgren och Hanna Arvidsson på xxx
-          senast den 10 juli 2020.
-        </p>
-      </div>
-
-      <div className="right">
-        <h1>
           <span className="FirstLetter">P</span> <span>resenter</span>
         </h1>
         <p className="intro">
           Vi önskar oss inte några presenter, endast att ni kommer och firar med
           oss!
+        </p>
+      </div>
+
+      <div className="right">
+        <h1>
+          <span className="FirstLetter">B</span> <span>arn</span>
+        </h1>
+        <p className="intro">
+          För att alla föräldrar ska kunna släppa loss riktigt ordentligt önskar
+          vi en barnfri helg (självklart med undantag för de allra minsta
+          småttingarna).
         </p>
       </div>
     </div>
