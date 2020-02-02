@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
+import { withStyles } from "@material-ui/core/styles";
 
 import { NAVIGATE_TO, TOGGLE_AUTH, UPDATE_GUEST } from "../actions";
 import { routes } from "../reducers/reducer_router";
@@ -15,6 +16,28 @@ import { PASSWORDS, SALT } from "../assets/passwords.js";
 // import api from "../controler";
 
 import "../styles/rsvp.scss";
+
+const MyTextField = withStyles({
+  root: {
+    // "& label.Mui-focused": {
+    //   color: "blue"
+    // },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "#7e7f7f"
+    }
+    // "& .MuiOutlinedInput-root": {
+    //   "& fieldset": {
+    //     borderColor: "red"
+    //   },
+    //   "&:hover fieldset": {
+    //     borderColor: "yellow"
+    //   },
+    //   "&.Mui-focused fieldset": {
+    //     borderColor: "green"
+    //   }
+    // }
+  }
+})(TextField);
 
 const RSVP = ({ setResponding }) => {
   const dispatch = useDispatch();
@@ -49,13 +72,16 @@ const RSVP = ({ setResponding }) => {
     return (
       <div className="RsvpContainer">
         <h3>Vad heter Linnea och Marcus hund?</h3>
-        <TextField
+        <p style={{ marginTop: "-1em", fontWeight: "light" }}>
+          (Lösenordet står på inbjudan)
+        </p>
+        <MyTextField
           id="pass"
           label="Lösenord"
           className="Input"
           type="password"
           margin="normal"
-          variant="outlined"
+          variant="standard"
           value={password}
           onChange={e => handlePasswordChange(e.target.value)}
         />
@@ -77,36 +103,36 @@ const RSVP = ({ setResponding }) => {
   const renderForm = () => {
     return (
       <div className="RsvpContainer">
-        <TextField
+        <MyTextField
           id="namn"
           label="Namn"
           className="Input"
           type="name"
           name="namn"
           margin="normal"
-          variant="outlined"
+          variant="standard"
           value={guests.guest1.name}
           onChange={e => handleFormChange(e.target.value, "name", "guest1")}
         />
-        <TextField
+        <MyTextField
           id="mail"
           label="Mail"
           className="Input"
           type="email"
           name="mail"
           margin="normal"
-          variant="outlined"
+          variant="standard"
           value={guests.guest1.mail}
           onChange={e => handleFormChange(e.target.value, "mail", "guest1")}
         />
-        <TextField
+        <MyTextField
           id="allergies"
           label="Specialkost / Allergier"
           className="Input"
           type="text"
           name="allergier"
           margin="normal"
-          variant="outlined"
+          variant="standard"
           value={guests.guest1.spec}
           onChange={e => handleFormChange(e.target.value, "spec", "guest1")}
         />

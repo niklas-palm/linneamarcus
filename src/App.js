@@ -1,6 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+
 import { routes } from "./reducers/reducer_router";
 
 import "./App.scss";
@@ -16,6 +19,12 @@ import RSVP from "./components/rsvp";
 import Friday from "./components/friday";
 import Contact from "./components/contact";
 import Info from "./components/info";
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Cormorant Garamond", "serif"].join(",")
+  }
+});
 
 function App() {
   const route = useSelector(state => state.route);
@@ -46,15 +55,17 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <DesktopHeader />
-      <Header />
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <DesktopHeader />
+        <Header />
 
-      <Drawer />
-      <Hamburger />
+        <Drawer />
+        <Hamburger />
 
-      {renderRoute()}
-    </div>
+        {renderRoute()}
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -10,12 +10,14 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import reducers from "./reducers";
+import rootReducer from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers, composeWithDevTools())}>
+  <Provider
+    store={createStoreWithMiddleware(rootReducer, composeWithDevTools())}
+  >
     <CssBaseline>
       <App />
     </CssBaseline>
