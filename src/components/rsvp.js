@@ -5,45 +5,35 @@ import bcrypt from "bcryptjs";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import Radio from "@material-ui/core/Radio";
 import { withStyles } from "@material-ui/core/styles";
 
-import { NAVIGATE_TO, TOGGLE_AUTH, UPDATE_GUEST } from "../actions";
+import { NAVIGATE_TO, TOGGLE_AUTH, ADD_GUEST } from "../actions";
 import { routes } from "../reducers/reducer_router";
 
 import { PASSWORDS, SALT } from "../assets/passwords.js";
 
-// import api from "../controler";
+import Mail from "./rsvp/Mail";
+import Guest from "./rsvp/Guest";
+
+import api from "../controler";
 
 import "../styles/rsvp.scss";
 
 const MyTextField = withStyles({
   root: {
-    // "& label.Mui-focused": {
-    //   color: "blue"
-    // },
     "& .MuiInput-underline:after": {
       borderBottomColor: "#7e7f7f"
     }
-    // "& .MuiOutlinedInput-root": {
-    //   "& fieldset": {
-    //     borderColor: "red"
-    //   },
-    //   "&:hover fieldset": {
-    //     borderColor: "yellow"
-    //   },
-    //   "&.Mui-focused fieldset": {
-    //     borderColor: "green"
-    //   }
-    // }
   }
 })(TextField);
 
-const RSVP = ({ setResponding }) => {
+const RSVP = () => {
   const dispatch = useDispatch();
-  // const [controler] = useState(new api());
+  const [controler] = useState(new api());
   const [password, setPassword] = useState("");
   const [wrongPass, setWrongPass] = useState(false);
+  const [mailSubmitted, setMailSubmitted] = useState(false);
+  const [emptyName, setEmptyName] = useState([]);
 
   const auth = useSelector(state => state.auth);
   const guests = useSelector(state => state.rsvp);
@@ -57,15 +47,6 @@ const RSVP = ({ setResponding }) => {
     if (PASSWORDS.includes(bcrypt.hashSync(password.toLowerCase(), SALT))) {
       dispatch({ type: TOGGLE_AUTH, payload: true });
     } else setWrongPass(true);
-  };
-
-  const handleFormChange = (val, field, guest) => {
-    console.log(val);
-
-    guests[guest][field] = val;
-    let payload = guests;
-
-    dispatch({ type: UPDATE_GUEST, payload });
   };
 
   const renderPassword = () => {
@@ -101,83 +82,112 @@ const RSVP = ({ setResponding }) => {
   };
 
   const renderForm = () => {
-    return (
-      <div className="RsvpContainer">
-        <MyTextField
-          id="namn"
-          label="Namn"
-          className="Input"
-          type="name"
-          name="namn"
-          margin="normal"
-          variant="standard"
-          value={guests.guest1.name}
-          onChange={e => handleFormChange(e.target.value, "name", "guest1")}
+    if (!auth) {
+      return renderPassword();
+    }
+    if (mailSubmitted) {
+      return guests.info.map((guest, i) => (
+        <Guest
+          key={i}
+          index={i}
+          nameIsEmpty={emptyName.includes(i)}
+          clearEmptyName={() => {
+            emptyName.splice(emptyName.indexOf(i), 1);
+            setEmptyName(emptyName);
+          }}
         />
-        <MyTextField
-          id="mail"
-          label="Mail"
-          className="Input"
-          type="email"
-          name="mail"
-          margin="normal"
-          variant="standard"
-          value={guests.guest1.mail}
-          onChange={e => handleFormChange(e.target.value, "mail", "guest1")}
-        />
-        <MyTextField
-          id="allergies"
-          label="Specialkost / Allergier"
-          className="Input"
-          type="text"
-          name="allergier"
-          margin="normal"
-          variant="standard"
-          value={guests.guest1.spec}
-          onChange={e => handleFormChange(e.target.value, "spec", "guest1")}
-        />
+      ));
+    }
 
-        <div className="Choice">
-          <h3>Jag deltar på middagen fredagen den 31/7</h3>
-          <Radio
-            className="Radio"
-            disableRipple
-            checked={guests.guest1.friday}
-            color="primary"
-            onClick={e =>
-              handleFormChange(!guests.guest1.friday, "friday", "guest1")
-            }
-          />
-        </div>
-        {guests.guest1.friday ? (
-          <div className="Choice">
-            <h3>Jag önskar transport</h3>
-            <Radio
-              className="Radio"
-              disableRipple
-              checked={guests.guest1.ride}
-              color="primary"
-              onClick={e =>
-                handleFormChange(!guests.guest1.ride, "ride", "guest1")
-              }
-            />
-          </div>
-        ) : null}
-        <Button
-          className="RsvpButton"
-          variant="contained"
-          color="primary"
-          onClick={() => dispatch({ type: NAVIGATE_TO, payload: routes.RSVP })}
+    return <Mail go={() => setMailSubmitted(true)} controler={controler} />;
+  };
+
+  const verifyGuests = guestObj => {
+    const removeEmptySpec = arr => {
+      const newList = arr.map(el => {
+        if (el.spec === "") {
+          el.spec = "-";
+        }
+        return el;
+      });
+
+      return newList;
+    };
+
+    const isNameEmpty = arr => {
+      const resIndexes = arr
+        .map((el, index) => {
+          if (el.name === "") {
+            return index;
+          }
+          return null;
+        })
+        .filter(el => el != null);
+
+      return resIndexes;
+    };
+
+    const emptyNameArray = isNameEmpty(guests.info);
+
+    if (emptyNameArray.length > 0) {
+      setEmptyName(emptyNameArray);
+      return false;
+    }
+
+    guestObj.info = removeEmptySpec(guestObj.info);
+    return guestObj;
+  };
+
+  const onSubmit = async () => {
+    const payload = verifyGuests(guests);
+    // Validation checks have failed
+    if (payload === false) return;
+
+    try {
+      await controler.post(payload);
+      dispatch({ type: NAVIGATE_TO, payload: routes.FINAL });
+    } catch (err) {
+      console.err("Something went terribly wrong when posting!!!");
+    }
+  };
+
+  const renderButtons = () => {
+    if (auth && mailSubmitted) {
+      return (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center"
+          }}
         >
-          OSA
-        </Button>
-      </div>
-    );
+          <Button
+            // className="RsvpButton"
+            variant="contained"
+            color="primary"
+            onClick={() => dispatch({ type: ADD_GUEST })}
+          >
+            Lägg till gäst
+          </Button>
+
+          <Button
+            className="RsvpButton"
+            variant="contained"
+            color="primary"
+            onClick={() => onSubmit()}
+          >
+            OSA
+          </Button>
+        </div>
+      );
+    }
+    return;
   };
 
   return (
     <div className="RsvpContainer">
-      {auth ? renderForm() : renderPassword()}
+      {renderForm()}
+      {renderButtons()}
     </div>
   );
 };

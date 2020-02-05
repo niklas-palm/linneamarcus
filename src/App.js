@@ -19,6 +19,7 @@ import RSVP from "./components/rsvp";
 import Friday from "./components/friday";
 import Contact from "./components/contact";
 import Info from "./components/info";
+import Final from "./components/rsvp/Final";
 
 const theme = createMuiTheme({
   typography: {
@@ -48,6 +49,9 @@ function App() {
 
       case routes.CONTACT:
         return <Contact />;
+
+      case routes.FINAL:
+        return <Final />;
 
       default:
         break;

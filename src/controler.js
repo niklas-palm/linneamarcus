@@ -2,24 +2,26 @@ import axios from "axios";
 
 export default class api {
   constructor() {
-    this.url =
-      "https://1y6t9lzjwa.execute-api.eu-west-1.amazonaws.com/dev/read-write-to-dynamo";
-    this.param = {
-      TableName: "guests",
-      Item: {
-        phone: "123123",
-        guest: "marcus",
-        "+1": "Kevin"
-      }
-    };
+    this.url = "https://693l86ks4d.execute-api.eu-west-1.amazonaws.com/Prod/";
   }
 
   async post(body) {
     try {
-      const response = await axios.post(this.url, JSON.stringify(this.param));
-      console.log(response);
+      const response = await axios.post(this.url, JSON.stringify(body));
+      return response;
     } catch (error) {
       console.error(error);
+      return error;
+    }
+  }
+
+  async get(email) {
+    try {
+      const response = await axios.get(`${this.url}?email=${email}`);
+      return response;
+    } catch (error) {
+      console.error(error);
+      return error;
     }
   }
 }

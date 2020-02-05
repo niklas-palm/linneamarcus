@@ -3,7 +3,7 @@ import React from "react";
 import "../styles/landing.scss";
 
 import Overlay from "./overlay";
-import Schedule from "./schedule";
+// import Schedule from "./schedule";
 
 const Landing = () => {
   return (

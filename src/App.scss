@@ -14,6 +14,13 @@
     max-width: $maxWidth;
   }
 
+  .divider {
+    align-self: center;
+    width: 60px;
+    // border-bottom: 1px solid #af915d;
+    border-bottom: 1px solid #c9a972;
+    margin: 1em 1em;
+  }
   // .Hamburger {
   //   padding: 1em;
   //   display: flex;
