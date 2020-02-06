@@ -32,7 +32,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
   };
 
   return (
-    <div className="RsvpContainer">
+    <div className="RsvpContainer" style={{ marginBottom: "1em" }}>
       <MyTextField
         id="namn"
         label="Namn"
@@ -41,6 +41,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
         name="namn"
         margin="normal"
         variant="standard"
+        maxLength="40"
         value={guests.info[index].name}
         onChange={e => handleFormChange(e.target.value, "name")}
       />
@@ -55,6 +56,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
         name="allergier"
         margin="normal"
         variant="standard"
+        maxLength="40"
         value={guests.info[index].spec}
         onChange={e => handleFormChange(e.target.value, "spec")}
       />
@@ -70,7 +72,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
       </div>
       {guests.info[index].friday ? (
         <div className="Choice">
-          <h3>Önskar transport</h3>
+          <h3>Önskas transport fredag</h3>
           <Radio
             className="Radio"
             disableRipple
@@ -94,7 +96,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
 
       <div
         className="divider"
-        style={{ marginBottom: "0", marginTop: "2em" }}
+        style={{ marginBottom: "1em", marginTop: "2em" }}
       ></div>
     </div>
   );

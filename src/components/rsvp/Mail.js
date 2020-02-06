@@ -68,6 +68,7 @@ const Mail = ({ go, controler }) => {
         name="mail"
         margin="normal"
         variant="standard"
+        maxLength="40"
         value={guests.mail}
         onChange={e => handleMailChange(e.target.value)}
       />
