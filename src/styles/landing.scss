@@ -13,9 +13,11 @@
     width: 100%;
     position: relative;
     content: url("../assets/linneamarcus.png");
+    background: url("../assets/linneamarcus.png") no-repeat;
 
     @media (max-width: $tablet-width) {
       content: url("../assets/linneamarcus_mobile.png");
+      background: url("../assets/linneamarcus_mobile.png") no-repeat;
     }
   }
 

@@ -8,7 +8,7 @@ import Overlay from "./overlay";
 const Landing = () => {
   return (
     <div className="LandingContainer">
-      <img className="LandingImage" alt="Couple" />
+      <img className="LandingImage" alt=" " />
       <Overlay />
 
       {/* <div className="left">
