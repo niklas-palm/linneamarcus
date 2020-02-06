@@ -165,7 +165,14 @@ const RSVP = () => {
             // className="RsvpButton"
             variant="contained"
             color="primary"
-            onClick={() => dispatch({ type: ADD_GUEST })}
+            onClick={() => {
+              if (guests.info.length < 7) {
+                dispatch({ type: ADD_GUEST });
+              }
+              console.log(
+                "Why are you trying to RSVP for more people than you should, you bastard!?"
+              );
+            }}
           >
             Lägg till gäst
           </Button>
