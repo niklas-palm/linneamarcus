@@ -119,7 +119,7 @@ const RSVP = () => {
     const isNameEmpty = arr => {
       const resIndexes = arr
         .map((el, index) => {
-          if (el.name === "") {
+          if (el.name === "" || el.name.length > 40 || el.spec.length > 40) {
             return index;
           }
           return null;
