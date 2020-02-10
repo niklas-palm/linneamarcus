@@ -1,4 +1,3 @@
-
 version: 0.2
 phases:
   install:
@@ -16,14 +15,15 @@ phases:
       - npm run build
   post_build:
     commands:
-        - echo Build complete. Deleting current contents of the S3 bucket.
-        # This is done because the static assets produced by npm run build
-        # change names. The ones that keep their names overwrite the current
-        # files in the deploy (good) but apart from those the files with
-        # old names are just left, bloating the bucket.
-        - aws s3 rm s3://test-wedding123 --recursive
+      - echo Build complete. Deleting current contents of the S3 bucket.
+      # This is done because the static assets produced by npm run build
+      # change names. The ones that keep their names overwrite the current
+      # files in the deploy (good) but apart from those the files with
+      # old names are just left, bloating the bucket.
+      # - aws s3 rm s3://test-wedding123 --recursive
+      - aws s3 rm s3://wedding-static-files --recursive
 
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
   base-directory: build
