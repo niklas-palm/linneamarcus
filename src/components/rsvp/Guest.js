@@ -3,11 +3,14 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
+import CloseIcon from "@material-ui/icons/Close";
 import { withStyles } from "@material-ui/core/styles";
 
 import { UPDATE_GUEST, DELETE_GUEST } from "../../actions";
+
+import "../../styles/guest.scss";
 
 const MyTextField = withStyles({
   root: {
@@ -32,7 +35,18 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
   };
 
   return (
-    <div className="RsvpContainer" style={{ marginBottom: "1em" }}>
+    <div
+      className="RsvpContainer"
+      style={({ marginBottom: "1em" }, index > 0 ? { marginTop: "0em" } : null)}
+    >
+      {index > 0 ? (
+        <div className="CloseIconWrapper">
+          <CloseIcon
+            className="CloseIcon"
+            onClick={() => dispatch({ type: DELETE_GUEST, payload: index })}
+          />
+        </div>
+      ) : null}
       <MyTextField
         id="namn"
         label="Namn"
@@ -72,7 +86,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
       </div>
       {guests.info[index].friday ? (
         <div className="Choice">
-          <h3>Önskas transport fredag</h3>
+          <h3>Önskar transport fredag</h3>
           <Radio
             className="Radio"
             disableRipple
@@ -82,7 +96,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
           />
         </div>
       ) : null}
-      {index > 0 ? (
+      {/* {index > 0 ? (
         <Button
           //   className="RsvpButton"
           style={{ margin: "1em" }}
@@ -92,7 +106,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
         >
           Ta bort gäst
         </Button>
-      ) : null}
+      ) : null} */}
 
       <div
         className="divider"

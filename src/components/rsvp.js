@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
 import { withStyles } from "@material-ui/core/styles";
 
 import { NAVIGATE_TO, TOGGLE_AUTH, ADD_GUEST } from "../actions";
@@ -34,6 +35,7 @@ const RSVP = () => {
   const [wrongPass, setWrongPass] = useState(false);
   const [mailSubmitted, setMailSubmitted] = useState(false);
   const [emptyName, setEmptyName] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const auth = useSelector(state => state.auth);
   const guests = useSelector(state => state.rsvp);
@@ -143,12 +145,16 @@ const RSVP = () => {
     // Validation checks have failed
     if (payload === false) return;
 
+    setLoading(true);
+
     try {
       await controler.post(payload);
       dispatch({ type: NAVIGATE_TO, payload: routes.FINAL });
     } catch (err) {
       console.err("Something went terribly wrong when posting!!!");
     }
+
+    setLoading(false);
   };
 
   const renderButtons = () => {
@@ -158,7 +164,8 @@ const RSVP = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center"
+            justifyContent: "center",
+            marginBottom: "3em"
           }}
         >
           <Button
@@ -168,10 +175,11 @@ const RSVP = () => {
             onClick={() => {
               if (guests.info.length < 7) {
                 dispatch({ type: ADD_GUEST });
+              } else {
+                console.log(
+                  "Why are you trying to RSVP for more people than you should, you bastard!?"
+                );
               }
-              console.log(
-                "Why are you trying to RSVP for more people than you should, you bastard!?"
-              );
             }}
           >
             Lägg till gäst
@@ -194,7 +202,11 @@ const RSVP = () => {
   return (
     <div className="RsvpContainer">
       {renderForm()}
-      {renderButtons()}
+      {loading ? (
+        <CircularProgress style={{ marginTop: "2em", marginBottom: "3em" }} />
+      ) : (
+        renderButtons()
+      )}
     </div>
   );
 };
