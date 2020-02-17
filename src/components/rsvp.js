@@ -69,15 +69,14 @@ const RSVP = () => {
           onChange={e => handlePasswordChange(e.target.value)}
         />
         <Button
+          className="RsvpButton"
           variant="contained"
           color="primary"
-          onClick={() =>
-            // dispatch({ type: NAVIGATE_TO, payload: routes.LANDING })
-            handleSubmit()
-          }
+          onClick={() => handleSubmit()}
         >
-          Go!
+          Nästa
         </Button>
+
         {wrongPass ? <p>fel lösenord!</p> : null}
       </div>
     );
