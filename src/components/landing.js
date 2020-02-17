@@ -1,11 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+
+import { NAVIGATE_TO } from "../actions";
+import { routes } from "../reducers/reducer_router";
+
+import Button from "@material-ui/core/Button";
 
 import "../styles/landing.scss";
 
 import Overlay from "./overlay";
-// import Schedule from "./schedule";
 
 const Landing = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="LandingContainer">
       <img className="LandingImage" alt=" " />
@@ -26,6 +33,15 @@ const Landing = () => {
         className="divider"
         style={{ marginBottom: "2em", marginTop: "0.5em" }}
       ></div>
+
+      <Button
+        className="RsvpButton"
+        variant="contained"
+        color="primary"
+        onClick={() => dispatch({ type: NAVIGATE_TO, payload: routes.RSVP })}
+      >
+        OSA
+      </Button>
     </div>
   );
 };

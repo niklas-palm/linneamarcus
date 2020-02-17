@@ -149,16 +149,21 @@
     }
   }
 
-  // .divider {
-  //   align-self: center;
-  //   width: 60px;
-  //   // border-bottom: 1px solid #af915d;
-  //   border-bottom: 1px solid #c9a972;
-  //   margin: 1em 1em;
-  // }
-
   ul {
     margin-top: 0;
     list-style-type: circle;
+  }
+
+  .RsvpButton {
+    margin-bottom: 1em;
+    width: 6em;
+    align-self: center;
+    background-color: transparent;
+    color: cadetblue;
+    border: 1px solid rgb(160, 160, 160);
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
