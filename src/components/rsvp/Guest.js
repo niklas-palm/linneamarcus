@@ -62,7 +62,7 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
         <p style={{ color: "red" }}>Namn får ej vara tomt</p>
       ) : null}
       <MyTextField
-        id="allergies"
+        // id="allergies"
         label="Specialkost / Allergier"
         className="Input"
         type="text"
