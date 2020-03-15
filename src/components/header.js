@@ -12,6 +12,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const navigateTo = route => {
+    document.documentElement.scrollTop = 0;
     dispatch({ type: NAVIGATE_TO, payload: route });
   };
 

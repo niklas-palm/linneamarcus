@@ -15,6 +15,7 @@ const DesktopHeader = () => {
   const color = "#bd9147";
 
   const navigateTo = route => {
+    document.documentElement.scrollTop = 0;
     dispatch({ type: NAVIGATE_TO, payload: route });
   };
 

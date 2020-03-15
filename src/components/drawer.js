@@ -38,6 +38,7 @@ export default function SwipeableTemporaryDrawer() {
   };
 
   const navigateTo = route => {
+    document.documentElement.scrollTop = 0;
     dispatch({ type: TOGGLE_DRAWER, payload: false });
     dispatch({ type: NAVIGATE_TO, payload: route });
   };

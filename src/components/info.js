@@ -28,6 +28,7 @@ const Info = () => {
               style={{ color: "inherit" }}
               href="https://www.scandichotels.se/stjorgen?bookingcode=BSTA310720"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <p> Scandics hemsida</p>
             </a>
