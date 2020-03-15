@@ -26,7 +26,7 @@ const Info = () => {
           <li>
             <a
               style={{ color: "inherit" }}
-              href="www.scandichotels.se/stjorgen?bookingcode=BSTA310720"
+              href="https://www.scandichotels.se/stjorgen?bookingcode=BSTA310720"
               target="_blank"
             >
               <p> Scandics hemsida</p>
