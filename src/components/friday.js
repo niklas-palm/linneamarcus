@@ -33,7 +33,14 @@ const Friday = () => {
           För dem som anländer med bil på fredagen är adressen till Stallgården
           följande:
         </p>
-        <p>Stallgården Bröllop & Event, Steglarpsbyavägen 43 i Vellinge</p>
+        <a
+          style={{ textDecoration: "none", color: "inherit" }}
+          href="https://g.page/StallgardenFuglie?share"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p> Stallgården Bröllop & Event, Steglarpsbyavägen 43 i Vellinge</p>
+        </a>
       </div>
     </div>
   );
