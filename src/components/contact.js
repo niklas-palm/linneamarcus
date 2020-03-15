@@ -27,8 +27,8 @@ const Contact = () => {
                 <img src={mail} alt="mail" className="Icon" />
               </div>
               <div className="Right">
-                <a href="mailto:linnea_lindvall@live.se">
-                  linnea_lindvall@live.se
+                <a href="mailto:brudpar@linneamarcus.se">
+                  brudpar@linneamarcus.se
                 </a>
               </div>
             </div>
@@ -52,8 +52,8 @@ const Contact = () => {
                 <img src={mail} alt="mail" className="Icon" />
               </div>
               <div className="Right">
-                <a href="mailto:marcus.almhagen@gmail.com">
-                  marcus.almhagen@gmail.com
+                <a href="mailto:brudpar@linneamarcus.se">
+                  brudpar@linneamarcus.se
                 </a>
               </div>
             </div>
