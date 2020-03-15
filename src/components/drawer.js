@@ -59,7 +59,9 @@ export default function SwipeableTemporaryDrawer() {
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.LANDING)}>
           {/* <img src={heart} alt="heart" className="Icon" /> */}
-          <h3 style={current === routes.LANDING ? { color } : null}>Om oss</h3>
+          <h3 style={current === routes.LANDING ? { color } : null}>
+            Om brudparet
+          </h3>
         </div>
 
         <div className="DrawerRow" onClick={() => navigateTo(routes.INFO)}>

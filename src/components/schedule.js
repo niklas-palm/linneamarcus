@@ -19,7 +19,7 @@ const Schedule = () => {
             <img className="Icon" src={bus} alt="bus" />
           </div>
           <p className="Time">13:00</p>
-          <p className="Info">Avgång från hotellet</p>
+          <p className="Info">Avfärd från Scandic S:t Jörgen</p>
         </div>
 
         <div className="Row">
@@ -27,22 +27,22 @@ const Schedule = () => {
             <img className="Icon" src={rings} alt="rings" />
           </div>
           <p className="Time">14:00</p>
-          <p className="Info">Vigsel</p>
+          <p className="Info">Vigsel i Hököpinge kyrka</p>
         </div>
 
         <div className="Row">
           <div className="IconContainer">
             <img className="Icon" src={mingel} alt="glasses" />
           </div>
-          <p className="Time">15:30</p>
-          <p className="Info">Mingel på Stallgården</p>
+          <p className="Time">16:00</p>
+          <p className="Info">Fördrink på Stallgården</p>
         </div>
 
         <div className="Row">
           <div className="IconContainer">
             <img className="Icon" src={camera} alt="camera" />
           </div>
-          <p className="Time">16:00</p>
+          <p className="Time">16:30</p>
           <p className="Info">Gruppfoto</p>
         </div>
 
@@ -51,7 +51,7 @@ const Schedule = () => {
             <img className="Icon" src={party} alt="party" />
           </div>
           <p className="Time">17:00 - 03:00</p>
-          <p className="Info">Middag och fest</p>
+          <p className="Info">Bröllopsmiddag och fest</p>
         </div>
       </div>
     </div>

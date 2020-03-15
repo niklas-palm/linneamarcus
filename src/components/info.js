@@ -8,19 +8,20 @@ const Info = () => {
           <span className="FirstLetter">B</span> <span>oende</span>
         </h1>
         <p className="intro">
-          Vi har reserverat ett antal hotellrum för våra gäster på Scandic S:t
-          Jörgen som är beläget i närheten av centralstationen i Malmö. Rummen
-          finns tillgängliga för bokning till och med den 31 maj 2020, därefter
-          släpps vår reservation så se till att boka innan dess!
+          Vi har reserverat hotellrum för våra gäster på Scandic S:t Jörgen i
+          Malmö (cirka tio minuters gångavstånd från Malmö centralstation).
+          Rummen finns tillgängliga för bokning till och med den 31 maj 2020,
+          därefter släpps vår reservation så se till att boka innan dess!
+        </p>
+        <p>
+          Uppge BSTA310720 för rabatterat pris (750 kr för ett dubbelrum per
+          natt).
         </p>
         <p>
           Det finns även ett par flerbäddsrum och singelrum reserverade,
-          vänligen kontakta hotellet på ovan telefonnummer om ni önskar boka ett
-          sådant rum. Glöm inte att uppge rabattkoden!
+          vänligen kontakta hotellet om ni önskar boka ett sådant rum.
         </p>
-        <p style={{ marginBottom: "0" }}>
-          Bokning av hotellrum kan göras via:{" "}
-        </p>
+        <p style={{ marginBottom: "0" }}>Bokning av hotellrum sker via: </p>
         <ul>
           <li>
             <a
@@ -48,12 +49,8 @@ const Info = () => {
           </li>
         </ul>
         <p>
-          <b>OBS:</b> Vid bokningen uppger ni koden BSTA310720 för att erhålla
-          ett rabatterat pris (750 kr för ett dubbelrum per natt).
-        </p>
-        <p>
-          I Malmö finns det ju förstås även en stor variation av andra
-          boendemöjligheter, t.ex. via Airbnb, hotell eller vandrarhem.
+          I Malmö finns det även en stor variation av andra boendemöjligheter,
+          t.ex. via Airbnb, hotell eller vandrarhem.
         </p>
       </div>
 
@@ -61,33 +58,20 @@ const Info = () => {
 
       <div className="right">
         <h1>
-          <span className="FirstLetter">A</span> <span>tt ta sig dit</span>
+          <span className="FirstLetter">P</span> <span>resenter</span>
         </h1>
         <p className="intro">
-          Tänk på att boka resa i god tid för att slippa onödiga kostnader när
-          priserna stiger. Scandic S:t Jörgen i Malmö ligger centralt beläget på
-          cirka 10 minuters gångavstånd från Malmös centralstation.
+          Att ni är med och firar vårt bröllop är det enda vi önskar oss!
         </p>
       </div>
 
       <div className="left">
         <h1>
-          <span className="FirstLetter">P</span> <span>resenter</span>
-        </h1>
-        <p className="intro">
-          Vi önskar oss inte några presenter, endast att ni kommer och firar med
-          oss!
-        </p>
-      </div>
-
-      <div className="right">
-        <h1>
           <span className="FirstLetter">B</span> <span>arn</span>
         </h1>
         <p className="intro">
-          För att alla föräldrar ska kunna släppa loss riktigt ordentligt önskar
-          vi en barnfri helg (självklart med undantag för de allra minsta
-          småttingarna).
+          Vi älskar barn och särskilt era, men den här helgen önskar vi fira med
+          våra vuxna vänner. Spädbarn är givetvis välkomna!
         </p>
       </div>
     </div>

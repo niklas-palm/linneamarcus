@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default class api {
   constructor() {
-    // this.url = "https://693l86ks4d.execute-api.eu-west-1.amazonaws.com/Prod/";
-    this.url = "https://cgdz4u2x7e.execute-api.eu-west-1.amazonaws.com/Prod/";
+    this.url = "https://lwkbswc64c.execute-api.eu-west-1.amazonaws.com/Prod/";
+    // this.url = "https://cgdz4u2x7e.execute-api.eu-west-1.amazonaws.com/Prod/"; // LIVE
   }
 
   async post(body) {

@@ -20,13 +20,31 @@ const Landing = () => {
 
       <div className="center" style={{ marginTop: "2em" }}>
         <p className="intro">
-          En mörk novemberkväll 2012 i vimlet på Stockholms nation i Uppsala
-          träffades vi, brudparet, för första gången och båda kände att det låg
-          något speciellt i luften. Marcus försökte bjuda hem Linnea på
-          efterfest, Linnea nappade dock inte den gången. Några veckor senare
-          var det dags för lussegasque, och vi pratade oavbrutet med varandra i
-          minst åtta timmar… osv Den första kyssen ägde rum i på Snerikes nation
-          i Uppsala precis före jul, och efter det har vi varit oskiljaktiga.
+          En decemberkväll i vimlet på Stockholms nation (läs kakel) för snart
+          åtta år sedan träffades vi, brudparet, för första gången. Redan från
+          start låg det något väldigt speciellt i luften. Linnea föll pladask
+          (bildligt och bokstavligt talat) när hon fick ta del av några av
+          Marcus oförglömliga dansmoves den kvällen. Att detta ska ha ägt rum
+          förnekas än idag av Marcus som ju, som många av er vet, för det mesta
+          skyr dansgolvet (om det inte vankas Zara Larsson i högtalarna
+          förstås). Med denna dansanta start inleddes vår kärlekshistoria och
+          sedan dess har det varit vi.
+        </p>
+        <p>
+          Vi förlovade oss i Paris efter att Marcus hade försökt hitta rätt
+          tillfälle och plats - en plats utan några människor i närheten - under
+          två något nervösa dygn. Detta visade sig vara en omöjlig uppgift och
+          sista kvällen bestämde sig Marcus därför i lite lätt panik att fria på
+          hotellet istället. Linnea, som inte anade någonting, hade glatt hunnit
+          byta om till myskläder och hade munnen full av chips när frågan väl
+          kom. Det blev kanske inte exakt så som Marcus hade planerat det men en
+          oförglömlig historia och ett väldigt känslofyllt ögonblick som
+          brudparet gärna berättar mer om.
+        </p>
+        <p>
+          Här är vi nu, snart åtta år senare, och ska äntligen gifta oss. Vi ser
+          enormt mycket fram emot att få dela vår stora dag och bröllopshelg
+          tillsammans med er - våra favoritpersoner i hela världen!
         </p>
       </div>
       <div

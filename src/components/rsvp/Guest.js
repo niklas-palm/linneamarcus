@@ -84,7 +84,10 @@ const Guest = ({ index, nameIsEmpty, clearEmptyName }) => {
       </div>
       {guests.info[index].friday ? (
         <div className="Choice">
-          <h3>Önskar transport fredag</h3>
+          <h3>
+            Önskar transport tur och retur till välkomstmiddagen mellan hotell
+            Scandic S:t Jörgen och Stallgården fredagen den 31/7.
+          </h3>
           <Radio
             className="Radio"
             disableRipple

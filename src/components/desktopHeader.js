@@ -35,7 +35,9 @@ const DesktopHeader = () => {
         className="DeskHeaderItem"
         onClick={() => navigateTo(routes.LANDING)}
       >
-        <h3 style={route === routes.LANDING ? { color } : null}>Om oss</h3>
+        <h3 style={route === routes.LANDING ? { color } : null}>
+          Om brudparet
+        </h3>
       </div>
 
       <div className="HeaderCenter" onClick={() => navigateTo(routes.LANDING)}>
