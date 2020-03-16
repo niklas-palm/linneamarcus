@@ -68,8 +68,9 @@ const Contact = () => {
             <div className="Left">
               <img src={contact} alt="phone" className="Icon" />
             </div>
-            <div className="Right">
-              <a href="tel:+46700029421">+46 70-xxx xx xx</a>
+            <div className="Right" style={{ flexDirection: "column" }}>
+              <a href="tel:+46707648018">+46 70-764 80 18 (Jenny)</a>
+              <a href="tel:+46730650479">+46 73-065 04 79 (Hanna)</a>
             </div>
           </div>
 
