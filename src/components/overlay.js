@@ -17,7 +17,7 @@ const Overlay = () => {
   return (
     <div className="OverlayContainer">
       <div className="OverlayText">
-        <h2>1 Augusti 2020</h2>
+        <h2>1 augusti 2020</h2>
         <img className="OverlayImg" alt="krams" src={krams} />
         <h2>Vellinge</h2>
       </div>

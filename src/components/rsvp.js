@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { withStyles } from "@material-ui/core/styles";
 
-import { NAVIGATE_TO, TOGGLE_AUTH, ADD_GUEST } from "../actions";
+import { NAVIGATE_TO, TOGGLE_AUTH, ADD_GUEST, RESET_GUEST } from "../actions";
 import { routes } from "../reducers/reducer_router";
 
 import { PASSWORDS, SALT } from "../assets/passwords.js";
@@ -148,6 +148,7 @@ const RSVP = () => {
 
     try {
       await controler.post(payload);
+      dispatch({ type: RESET_GUEST });
       dispatch({ type: NAVIGATE_TO, payload: routes.FINAL });
     } catch (err) {
       console.err("Something went terribly wrong when posting!!!");

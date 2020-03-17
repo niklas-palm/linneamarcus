@@ -3,6 +3,7 @@ export const TOGGLE_DRAWER = "toggle_drawer";
 export const NAVIGATE_TO = "navigate_to";
 
 export const UPDATE_GUEST = "update_guest";
+export const RESET_GUEST = "reset_guest";
 export const ADD_GUEST = "add_guest";
 export const DELETE_GUEST = "delete_guest";
 
@@ -26,6 +27,12 @@ export const updateGuest = guest => {
   return {
     type: UPDATE_GUEST,
     payload: guest
+  };
+};
+
+export const resetGuest = () => {
+  return {
+    type: RESET_GUEST
   };
 };
 
