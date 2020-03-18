@@ -93,6 +93,23 @@ const Mail = ({ go, controler }) => {
           Nästa
         </Button>
       )}
+      <p
+        style={{
+          textAlign: "center",
+          margin: "2em 1em"
+        }}
+      >
+        Om du inte kan delta under denna helg vänligen skicka ett mail till{" "}
+        <a
+          style={{
+            textDecoration: "none",
+            color: "inherit"
+          }}
+          href="mailto:brudpar@linneamarcus.se"
+        >
+          brudpar@linneamarcus.se
+        </a>
+      </p>
     </div>
   );
 };
